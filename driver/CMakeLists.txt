@@ -1,0 +1,37 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+PROJECT("FiberVR Driver")
+
+# Set the OpenVR SDK path here
+# TODO improve this
+SET(OPENVR_SDK_PATH "/data/Coding/openvr")
+SET(OPENVR_INCLUDE_PATH "${OPENVR_SDK_PATH}/headers")
+
+if(UNIX AND NOT APPLE)
+    SET(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+    SET(OPENVR_LIBRARY_PATH "${OPENVR_SDK_PATH}/bin/linux64")
+    SET(OUT_FOLDER "linux64")
+endif(UNIX AND NOT APPLE)
+
+if(MSVC)
+    SET(OPENVR_LIBRARY_PATH "${OPENVR_LIBRARY_PATH}/lib/win64")
+    SET(OUT_FOLDER "win64")
+endif(MSVC)
+
+SET(CMAKE_CXX_STARDARD 17)
+
+LINK_DIRECTORIES(${OPENVR_LIBRARY_PATH})
+INCLUDE_DIRECTORIES(${OPENVR_INCLUDE_PATH})
+
+SET(SOURCES 
+    ${CMAKE_SOURCE_DIR}/src/driver_main.cc
+    ${CMAKE_SOURCE_DIR}/src/server_provider.cc
+    ${CMAKE_SOURCE_DIR}/src/virtual_display.cc
+    )
+
+ADD_LIBRARY(driver_fibervr SHARED ${SOURCES})
+TARGET_LINK_LIBRARIES(driver_fibervr ${OPENVR_LIBRARY_PATH}/libopenvr_api.a)
+
+# Installing
+SET(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/out/)
+INSTALL(FILES driver.vrdrivermanifest DESTINATION fibervr/)
+INSTALL(TARGETS driver_fibervr DESTINATION fibervr/bin/${OUT_FOLDER})

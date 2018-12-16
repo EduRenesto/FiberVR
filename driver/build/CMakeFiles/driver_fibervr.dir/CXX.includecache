@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/data/Coding/FiberVR/driver/src/server_provider.cc
+server_provider.hh
+/data/Coding/FiberVR/driver/src/server_provider.hh
+
+/data/Coding/FiberVR/driver/src/server_provider.hh
+iostream
+-
+string
+-
+fstream
+-
+openvr_driver.h
+-
+
+/data/Coding/openvr/headers/openvr_driver.h
+stdint.h
+-
+string
+-
+string
+-
+vector
+-
+

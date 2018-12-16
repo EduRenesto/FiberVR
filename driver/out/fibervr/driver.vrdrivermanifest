@@ -1,0 +1,10 @@
+{
+    "alwaysActivate": true,
+    "name": "fibervr",
+    "directory": "",
+    "resourceOnly": false,
+    "hmd_presence": 
+    [
+        "*.*"
+    ]
+}

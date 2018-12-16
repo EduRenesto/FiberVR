@@ -1,0 +1,2 @@
+/data/Coding/FiberVR/driver/out/fibervr/driver.vrdrivermanifest
+/data/Coding/FiberVR/driver/out/fibervr/bin/linux64/libdriver_fibervr.so

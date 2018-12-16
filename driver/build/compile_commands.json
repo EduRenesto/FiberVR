@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/data/Coding/FiberVR/driver/build",
+  "command": "/usr/bin/clang++  -Ddriver_fibervr_EXPORTS -I/data/Coding/openvr/headers  -O3 -DNDEBUG -fPIC   -o CMakeFiles/driver_fibervr.dir/src/driver_main.cc.o -c /data/Coding/FiberVR/driver/src/driver_main.cc",
+  "file": "/data/Coding/FiberVR/driver/src/driver_main.cc"
+},
+{
+  "directory": "/data/Coding/FiberVR/driver/build",
+  "command": "/usr/bin/clang++  -Ddriver_fibervr_EXPORTS -I/data/Coding/openvr/headers  -O3 -DNDEBUG -fPIC   -o CMakeFiles/driver_fibervr.dir/src/server_provider.cc.o -c /data/Coding/FiberVR/driver/src/server_provider.cc",
+  "file": "/data/Coding/FiberVR/driver/src/server_provider.cc"
+},
+{
+  "directory": "/data/Coding/FiberVR/driver/build",
+  "command": "/usr/bin/clang++  -Ddriver_fibervr_EXPORTS -I/data/Coding/openvr/headers  -O3 -DNDEBUG -fPIC   -o CMakeFiles/driver_fibervr.dir/src/virtual_display.cc.o -c /data/Coding/FiberVR/driver/src/virtual_display.cc",
+  "file": "/data/Coding/FiberVR/driver/src/virtual_display.cc"
+}
+]
